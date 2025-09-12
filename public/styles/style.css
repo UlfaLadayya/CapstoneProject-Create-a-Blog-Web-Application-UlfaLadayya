@@ -1,4 +1,41 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to bottom left, #7401d8, #ff6a00, #FFF8E6);
+    font-family: "Akaya Kanadaka", system-ui;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.home_header{
+    padding-left: 20px;
+}
+.home_header h1{
+    font-family: "Akaya Kanadaka", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.navbar-brand{
+    font-family: "Akaya Kanadaka", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem !important;
+}
+.navbar-nav{
+    font-family: "Akaya Kanadaka", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem !important;
+}
+footer{
+    font-family: "Akaya Kanadaka", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+.navbar.navbar-expand-lg{
+    background-color: rgb(255, 248, 230);
 }
