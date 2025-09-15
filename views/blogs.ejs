@@ -1,0 +1,38 @@
+<%- include('partials/header', {title: 'Blogs Page'}) %>
+
+<div class="duo_blogs_function">
+  <ul class="nav nav-tabs">
+    <li class="nav-item" id="nav_back">
+      <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+  </ul>
+
+  <div class="btn-group" id="button_action">
+    <button
+      class="btn btn-secondary btn-lg dropdown-toggle"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+      Large button
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown_item" href="">Create</a></li>
+      <li><a class="dropdown_item" href="">Edit</a></li>
+      <li><a class="dropdown_item" href="">Delete</a></li>
+      <li><hr class="divider_dropdown_item" /></li>
+      <li><a class="drop_down_item" href="">Setting</a></li>
+    </ul>
+  </div>
+</div>
+
+<%-include('partials/footer') %>

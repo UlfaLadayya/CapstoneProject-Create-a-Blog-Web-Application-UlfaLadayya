@@ -12,7 +12,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', (req, res) =>{
-    res.render('index', { title: 'Halaman Dashboard' });
+    res.render('index', { title: 'Halaman Home' });
+});
+
+app.get('/blogs', (req, res) =>{
+    res.render('blogs', { title: 'Halaman Blogs' });
+});
+
+app.get('/aboutus', (req, res) =>{
+    res.render('aboutus', { title: 'Halaman About Us' });
+});
+
+app.get('/faq', (req, res) =>{
+    res.render('faq', { title: 'Halaman FAQ' });
 });
 
 app.listen(3000, () => {
