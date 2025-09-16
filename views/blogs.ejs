@@ -1,18 +1,112 @@
 <%- include('partials/header', {title: 'Blogs Page'}) %>
 
 <div class="duo_blogs_function">
-  <ul class="nav nav-tabs">
-    <li class="nav-item" id="nav_back">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+  <ul class="nav nav-tabs" id="main_tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <!-- <a class="nav-link active" aria-current="page" href="#">All</a> -->
+      <button
+        class="nav-link active"
+        id="all_post"
+        data-bs-toggle="tab"
+        data-bs-target="#allpost"
+        type="button"
+        role="tab"
+      >
+        All Post
+      </button>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="nav_back" role="presentation">
+      <button
+        class="nav-link"
+        id="all_latest"
+        data-bs-toggle="tab"
+        data-bs-target="#latest"
+        type="button"
+        role="tab"
+      >
+        Latest
+      </button>
+    </li>
+    <li class="nav-item" id="nav_back" role="presentation">
+      <button
+        class="nav-link"
+        id="all_popular"
+        data-bs-toggle="tab"
+        data-bs-target="#popular"
+        type="button"
+        role="tab"
+      >
+        Popular
+      </button>
+    </li>
+    <!-- <li class="nav-item">
       <a class="nav-link" href="#">Link</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+    </li> -->
+    <li class="nav-item dropdown" role="presentation">
+      <a
+        class="nav-link dropdown-toggle"
+        data-bs-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-expanded="false"
+      >
+        Categories
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a
+            class="dropdown-item"
+            id="tab_tech"
+            data-bs-toggle="tab"
+            data-bs-target="#tabtech"
+            role="tab"
+            >Technology</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            id="tab_science"
+            data-bs-toggle="tab"
+            data-bs-target="#tabscience"
+            role="tab"
+            >Science</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            id="tab_lifestyle"
+            data-bs-toggle="tab"
+            data-bs-target="#tablifestyle"
+            role="tab"
+            >Lifestyle</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            id="tab_art"
+            data-bs-toggle="tab"
+            data-bs-target="#tabart"
+            role="tab"
+            >Art</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item"
+            id="tab_travel"
+            data-bs-toggle="tab"
+            data-bs-target="#tabtravel"
+            role="tab"
+            >Travel</a
+          >
+        </li>
+      </ul>
     </li>
   </ul>
 
@@ -26,13 +120,92 @@
       Large button
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown_item" href="">Create</a></li>
-      <li><a class="dropdown_item" href="">Edit</a></li>
-      <li><a class="dropdown_item" href="">Delete</a></li>
+      <li><a class="dropdown-item" href="">Create</a></li>
+      <li><a class="dropdown-item" href="">Edit</a></li>
+      <li><a class="dropdown-item" href="">Delete</a></li>
       <li><hr class="divider_dropdown_item" /></li>
-      <li><a class="drop_down_item" href="">Setting</a></li>
+      <li><a class="dropdown-item" href="">Setting</a></li>
     </ul>
   </div>
 </div>
 
+<!-- Content of tab -->
+<div class="tab-content mt-3" id="Content_Tab">
+  <div class="tab-pane fade show active" id="allpost" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">
+        <!-- All articles will show here.. -->
+        <!-- Card of content -->
+        <div class="card mb-3" style="max-width: 540px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img
+                src="/photos/PexelsPhotobyMarkusSpiske.png"
+                alt="Picture of IT"
+                class="img-fluid rounded-start"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Apakah AI akan menggantikan mata pencaharian manusia ?
+                </h5>
+                <p class="card-text">
+                  AI sudah tidak asing lagi dikalangan insan manusia.
+                  <a href="">Mau tahu lebih lanjut?</a>
+                </p>
+
+                <p class="card-text">
+                  <small class="text-muted">
+                    Write by Ulf's Creativity <br />
+                    <hr />
+                    Last update 2 hours ago
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Card of content -->
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="latest" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All latest articles will show here..</div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="popular" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All popular articles will show here..</div>
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="tabtech" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All tech articles will show here..</div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="tabscience" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All science articles will show here..</div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="tablifestyle" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All lifestyle articles will show here..</div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="tabart" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All art articles will show here..</div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="tabtravel" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All travel articles will show here..</div>
+    </div>
+  </div>
+</div>
+<!-- End Content of Tab -->
 <%-include('partials/footer') %>
