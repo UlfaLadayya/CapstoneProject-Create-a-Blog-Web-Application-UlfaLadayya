@@ -41,7 +41,7 @@ footer{
 }
 .show_card_home_tag1{
     margin-left: 20px;
-    background-color: rgb(255, 248, 230, 0.65);
+    background-color: rgba(255, 248, 230, 0.65);
     /* margin-top: 20px; */
 }
 /* .show_card_home_tag1 .card-header{
@@ -92,9 +92,33 @@ footer{
     margin-left: 20px;
     margin-right: 20px;
     padding: 8px;
+    /* background-color: rgba(116, 1, 216, 0.45); */
+    background: linear-gradient(to top right, rgba(116, 1, 216, 0.5), rgba(255, 106, 0, 0.5), rgba(255, 248, 230, 0.5));
+     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: 0.3s; */
 }
 .img-one{
-    padding-top: 15px;
-    padding-left: 15px;
-    width: 700px;
+    padding-top: 20px;
+    padding-left: 25px;
+    padding-bottom: 20px;
+    width: 300px !important;
+}
+.card_body_right{
+    padding-top: 20px;
+}
+.main_card_body{
+    background-color: rgb(255, 248, 230);
+}
+
+.btn_blogs_action{
+    background-color: rgb(255, 248, 230);
+    border: none;
+}
+
+.btn_blogs_action:hover,
+.btn_blogs_action:active,
+.btn_blogs_action.show{
+    background: linear-gradient(to bottom left, #ff6a00, #FFF8E6);
+    box-shadow: none;
 }
