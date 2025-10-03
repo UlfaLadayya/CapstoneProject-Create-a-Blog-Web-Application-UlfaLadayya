@@ -545,25 +545,113 @@
     </div>
   </div>
   <div class="tab-pane fade" id="tabtravel" role="tabpanel">
-    <div class="card card-article">
+    <div class="card card-article card-button">
       <div class="card-body">All travel articles will show here..</div>
     </div>
   </div>
 
   <div class="tab-pane fade" id="tab_forcreate" role="tabpanel">
-    <div class="card card-articles">
-      <div class="card-body">Form creating blog will be showed here..</div>
+    <div class="card card-articles card-button">
+      <!-- <div class="card-body">Form creating blog will be showed here..</div> -->
+      <img
+        class="icon-button"
+        src="/icon/icon-plus.png"
+        alt="Icon Plus"
+        data-bs-toggle="modal"
+        data-bs-target="#popupCreate"
+      />
+      <!--ini pop up -->
+      <div
+        class="modal"
+        id="popupCreate"
+        tabindex="-1"
+        aria-labelledby="myModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Create New Blog</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <form action="">
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="title_of_blog" class="title_label">Title</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="title_of_blog"
+                    name="title"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="tag_of_blog" class="tag_label">Tag</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="tag_of_blog"
+                    name="tag"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="contents_of_blog" class="content_label"
+                    >Content</label
+                  >
+                  <textarea
+                    type="text"
+                    class="form-control"
+                    id="contents_of_blog"
+                    name="content"
+                    required
+                  ></textarea>
+                </div>
+                <div class="footer-of-modal">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+              </div>
+            </form>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Akhir dari pop up -->
     </div>
   </div>
 
   <div class="tab-pane fade" id="tab_foredit" role="tabpanel">
-    <div class="card card-articles">
+    <div class="card card-articles card-button">
       <div class="card-body">Form editing blog will be showed here..</div>
     </div>
   </div>
 
   <div class="tab-pane fade" id="tab_fordelete" role="tabpanel">
-    <div class="card card-articles">
+    <div class="card card-articles card-button">
       <div class="card-body">
         Confirmation for deleting blogs will be showed here..
       </div>
@@ -571,7 +659,7 @@
   </div>
 
   <div class="tab-pane fade" id="tab_forsetting" role="tabpanel">
-    <div class="card card-articles">
+    <div class="card card-articles card-button">
       <div class="card-body">Setting for blogs will be showed here..</div>
     </div>
   </div>
