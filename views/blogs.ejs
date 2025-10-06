@@ -560,7 +560,8 @@
         data-bs-toggle="modal"
         data-bs-target="#popupCreate"
       />
-      <!--ini pop up -->
+      <div id="blogLists" class="mt-4"></div>
+      <!--This is pop up -->
       <div
         class="modal"
         id="popupCreate"
@@ -579,7 +580,7 @@
                 aria-label="Close"
               ></button>
             </div>
-            <form action="">
+            <form id="createForm" action="">
               <div class="modal-body">
                 <div class="mb-3">
                   <label for="title_of_blog" class="title_label">Title</label>
@@ -625,7 +626,7 @@
                 </div>
               </div>
             </form>
-            <div class="modal-footer">
+            <!-- <div class="modal-footer">
               <button
                 type="button"
                 class="btn btn-secondary"
@@ -636,15 +637,80 @@
               <button type="button" class="btn btn-primary">
                 Save changes
               </button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
-      <!--Akhir dari pop up -->
+      <!--This end of pop up -->
     </div>
   </div>
 
-  <div class="tab-pane fade" id="tab_foredit" role="tabpanel">
+  <!-- script pop up create -->
+  <script>
+    const createForm = document.getElementById("createForm");
+    const createList = document.getElementById("blogLists");
+    createForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const title = document.getElementById("title_of_blog").value;
+      const tag = document.getElementById("tag_of_blog").value;
+      const content = document.getElementById("contents_of_blog").value;
+
+      const newPost = document.createElement("div");
+      newPost.innerHTML = `
+
+        <!-- Card of content -->
+        <div class="d-flex align-items-start mb-3">
+          <div class="card create_card_body flex-grow-1">
+            <h4 class="card-title">
+              ${title}
+            </h4>
+            <p class="card-text">
+              <small class="text-muted">
+                Write by Ulf's Creativity 
+              </small>
+            </p>
+            <br>
+            <p class="card-text">${content}</p>
+            <br>
+            <h6 class="card-subtitle">${tag}</h6>
+          </div>
+
+          <div class="d-flex flex-row ms-3">
+            <div class="mx-2">
+              <img
+                class="icon-button"
+                src="/icon/icon-update.png"
+                alt="Icon Plus"
+                data-bs-toggle=""
+                data-bs-target=""
+              />
+            </div>
+
+            <div>
+              <img
+                class="icon-button"
+                src="/icon/icon-trash.png"
+                alt="Icon Plus"
+                data-bs-toggle=""
+                data-bs-target=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- End Card of content -->
+      `;
+      createList.appendChild(newPost);
+
+      createForm.reset();
+      bootstrap.Modal.getInstance(
+        document.getElementById("popupCreate")
+      ).hide();
+    });
+  </script>
+  <!-- End of script pop up create -->
+
+  <!-- <div class="tab-pane fade" id="tab_foredit" role="tabpanel">
     <div class="card card-articles card-button">
       <div class="card-body">Form editing blog will be showed here..</div>
     </div>
@@ -656,7 +722,7 @@
         Confirmation for deleting blogs will be showed here..
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="tab-pane fade" id="tab_forsetting" role="tabpanel">
     <div class="card card-articles card-button">
@@ -670,3 +736,8 @@
 <!-- <div class="tab-content mt-3"></div> -->
 <!-- End Content of Right Button -->
 <%-include('partials/footer') %>
+<!-- <div>
+          <h5 class="card-title">${title}</h5>
+          <h5 class="card-subtitle">${tag}</h5>
+          <p class="card-text">${content}</p>
+        </div> -->
