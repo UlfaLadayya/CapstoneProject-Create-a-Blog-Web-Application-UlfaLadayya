@@ -645,7 +645,77 @@
     </div>
   </div>
 
-  <!-- script pop up create -->
+  <!--This is pop up update-->
+  <div
+    class="modal"
+    id="popupUpdate"
+    tabindex="-1"
+    aria-labelledby="myModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Update Blog</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <form id="updateForm" action="">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="update_title_blog" class="title_label">Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="update_title_blog"
+                name="title"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="update_tag_blog" class="tag_label">Tag</label>
+              <input
+                type="text"
+                class="form-control"
+                id="update_tag_blog"
+                name="tag"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="update_contents_blog" class="content_label"
+                >Content</label
+              >
+              <textarea
+                type="text"
+                class="form-control"
+                id="update_contents_blog"
+                name="content"
+                required
+              ></textarea>
+            </div>
+            <div class="footer-of-modal">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--This end of pop up -->
+
+  <!-- //SCRIPT POP UP\\ -->
   <script>
     const createForm = document.getElementById("createForm");
     const createList = document.getElementById("blogLists");
@@ -656,7 +726,11 @@
       const tag = document.getElementById("tag_of_blog").value;
       const content = document.getElementById("contents_of_blog").value;
 
+      const id = Date.now();
+
       const newPost = document.createElement("div");
+      newPost.classList.add("create_card_body");
+      newPost.setAttribute("data-id", id);
       newPost.innerHTML = `
 
         <!-- Card of content -->
@@ -679,19 +753,19 @@
           <div class="d-flex flex-row ms-3">
             <div class="mx-2">
               <img
-                class="icon-button"
+                class="icon-button btn-update"
                 src="/icon/icon-update.png"
-                alt="Icon Plus"
-                data-bs-toggle=""
-                data-bs-target=""
+                alt="Icon Update"
+                data-bs-toggle="modal"
+                data-bs-target="#popupUpdate"
               />
             </div>
 
             <div>
               <img
-                class="icon-button"
+                class="icon-button btn-delete"
                 src="/icon/icon-trash.png"
-                alt="Icon Plus"
+                alt="Icon Trash"
                 data-bs-toggle=""
                 data-bs-target=""
               />
@@ -705,6 +779,51 @@
       createForm.reset();
       bootstrap.Modal.getInstance(
         document.getElementById("popupCreate")
+      ).hide();
+    });
+
+    createList.addEventListener("click", function (e) {
+      const cardUpdate = e.target.closest(".create_card_body");
+      if (!cardUpdate) return;
+      // Update
+      if (e.target.classList.contains("btn-update")) {
+        document.getElementById("update_title_blog").value =
+          cardUpdate.querySelector("h4").innerText;
+        document.getElementById("update_tag_blog").value =
+          cardUpdate.querySelector("h6").innerText;
+        document.getElementById("update_content_blog").value =
+          cardUpdate.querySelector("p.card-text").innerText;
+
+        // Save target id to form update
+        document.getElementById("updateForm").dataset.targetId =
+          cardUpdate.dataset.id;
+      }
+
+      // Delete
+      if (e.target.classList.contains("btn-delete")) {
+        cardUpdate.remove();
+      }
+    });
+
+    // Handling update button
+    document.getElementById("updateForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const id = e.target.dataset.targetId;
+      const cardUpdate = document.querySelector(
+        `.create_card_body[data-id="${id}"]`
+      );
+
+      if (cardUpdate) {
+        cardUpdate.querySelector("h4").innerText =
+          document.getElementById("update_title_blog").value;
+        cardUpdate.querySelector("h6").innerText =
+          document.getElementById("update_tag_blog").value;
+        cardUpdate.querySelector("p.card-text").innerText =
+          document.getElementById("update_content_blog").value;
+      }
+      bootstrap.Modal.getInstance(
+        document.getElementById("popupUpdate")
       ).hide();
     });
   </script>
@@ -736,6 +855,7 @@
 <!-- <div class="tab-content mt-3"></div> -->
 <!-- End Content of Right Button -->
 <%-include('partials/footer') %>
+
 <!-- <div>
           <h5 class="card-title">${title}</h5>
           <h5 class="card-subtitle">${tag}</h5>
