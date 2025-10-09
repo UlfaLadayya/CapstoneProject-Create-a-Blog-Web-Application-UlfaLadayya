@@ -6,13 +6,13 @@
       <!-- <a class="nav-link active" aria-current="page" href="#">All</a> -->
       <button
         class="nav-link active"
-        id="all_post"
+        id="tab_create"
         data-bs-toggle="tab"
-        data-bs-target="#allpost"
+        data-bs-target="#tab_forcreate"
         type="button"
         role="tab"
       >
-        All Post
+        Create
       </button>
     </li>
     <li class="nav-item" id="nav_back" role="presentation">
@@ -20,14 +20,14 @@
         class="nav-link"
         id="all_latest"
         data-bs-toggle="tab"
-        data-bs-target="#latest"
+        data-bs-target="#info"
         type="button"
         role="tab"
       >
-        Latest
+        Information
       </button>
     </li>
-    <li class="nav-item" id="nav_back" role="presentation">
+    <!-- <li class="nav-item" id="nav_back" role="presentation">
       <button
         class="nav-link"
         id="all_popular"
@@ -38,7 +38,7 @@
       >
         Popular
       </button>
-    </li>
+    </li> -->
     <!-- <li class="nav-item">
       <a class="nav-link" href="#">Link</a>
     </li>
@@ -53,7 +53,7 @@
         role="button"
         aria-expanded="false"
       >
-        Categories
+        Idea's topics blog
       </a>
       <ul class="dropdown-menu">
         <li>
@@ -109,448 +109,11 @@
       </ul>
     </li>
   </ul>
-
-  <div class="btn-group" id="button_action">
-    <button
-      class="btn btn_blogs_action btn-lg dropdown-toggle"
-      type="button"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      Large button
-    </button>
-    <ul class="dropdown-menu">
-      <li>
-        <a
-          class="dropdown-item"
-          data-bs-toggle="tab"
-          data-bs-target="#tab_forcreate"
-          role="tab"
-          aria-controls="tab_forcreate"
-          >Create</a
-        >
-      </li>
-      <li>
-        <a
-          class="dropdown-item"
-          data-bs-toggle="tab"
-          data-bs-target="#tab_foredit"
-          role="tab"
-          aria-controls="tab_foredit"
-          >Edit</a
-        >
-      </li>
-      <li>
-        <a
-          class="dropdown-item"
-          data-bs-toggle="tab"
-          data-bs-target="#tab_fordelete"
-          role="tab"
-          aria-controls="tab_fordelete"
-          >Delete</a
-        >
-      </li>
-      <li><hr class="divider_dropdown_item" /></li>
-      <li>
-        <a
-          class="dropdown-item"
-          data-bs-toggle="tab"
-          data-bs-target="#tab_forsetting"
-          role="tab"
-          aria-controls="tab_forsetting"
-          >Setting</a
-        >
-      </li>
-    </ul>
-  </div>
 </div>
 
 <!-- Content of tab -->
 <div class="tab-content mt-3" id="Content_Tab">
-  <div class="tab-pane fade show active" id="allpost" role="tabpanel">
-    <div class="card card-article">
-      <div class="card-body">
-        <!-- All articles will show here.. -->
-        <!-- Card of content -->
-        <div class="card mb-3 main_card_body">
-          <div class="row g-0">
-            <div class="col-md-3">
-              <img
-                src="/photos/PexelsPhotobyMarkusSpiske.png"
-                alt="Picture of IT"
-                class="img-fluid rounded-start img-one"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body card_body_right">
-                <h4 class="card-title">
-                  Apakah AI akan menggantikan mata pencaharian manusia ?
-                </h4>
-                <p class="card-text">
-                  AI sudah tidak asing lagi dikalangan insan manusia.
-                  <a href="">Mau tahu lebih lanjut?</a>
-                </p>
-
-                <p class="card-text">
-                  <small class="text-muted">
-                    Write by Ulf's Creativity <br />
-                    <hr />
-                    Last update 2 hours ago
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Card of content -->
-
-        <!-- Card of content -->
-        <div class="card mb-3 main_card_body">
-          <div class="row g-0">
-            <div class="col-md-3">
-              <img
-                src="/photos/PexelsPhotobySerpstat.png"
-                alt="Picture of IT"
-                class="img-fluid rounded-start img-one"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body card_body_right">
-                <h4 class="card-title">
-                  Metode bisnis yang tepat untuk pemula. Apa saja itu?
-                </h4>
-                <p class="card-text">
-                  Banyak sekali orang yang sudah mulai berbisnis. Penting untuk
-                  mengetahui metode yang tepat agar kamu bisa berbinis dengan
-                  tepat.
-                  <a href="">Mau tahu lebih lanjut?</a>
-                </p>
-
-                <p class="card-text">
-                  <small class="text-muted">
-                    Write by Ulf's Creativity <br />
-                    <hr />
-                    Last update 1 hours ago
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Card of content -->
-
-        <!-- Card of content -->
-        <div class="card mb-3 main_card_body">
-          <div class="row g-0">
-            <div class="col-md-3">
-              <img
-                src="/photos/PexelsPhotobyMarkusSpiske.png"
-                alt="Picture of IT"
-                class="img-fluid rounded-start img-one"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body card_body_right">
-                <h4 class="card-title">
-                  Apakah AI akan menggantikan mata pencaharian manusia ?
-                </h4>
-                <p class="card-text">
-                  AI sudah tidak asing lagi dikalangan insan manusia.
-                  <a href="">Mau tahu lebih lanjut?</a>
-                </p>
-
-                <p class="card-text">
-                  <small class="text-muted">
-                    Write by Ulf's Creativity <br />
-                    <hr />
-                    Last update 2 hours ago
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Card of content -->
-
-        <!-- Card of content -->
-        <div class="card mb-3 main_card_body">
-          <div class="row g-0">
-            <div class="col-md-3">
-              <img
-                src="/photos/PexelsPhotobySerpstat.png"
-                alt="Picture of IT"
-                class="img-fluid rounded-start img-one"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body card_body_right">
-                <h4 class="card-title">
-                  Metode bisnis yang tepat untuk pemula. Apa saja itu?
-                </h4>
-                <p class="card-text">
-                  Banyak sekali orang yang sudah mulai berbisnis. Penting untuk
-                  mengetahui metode yang tepat agar kamu bisa berbinis dengan
-                  tepat.
-                  <a href="">Mau tahu lebih lanjut?</a>
-                </p>
-
-                <p class="card-text">
-                  <small class="text-muted">
-                    Write by Ulf's Creativity <br />
-                    <hr />
-                    Last update 1 hours ago
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Card of content -->
-
-        <!-- Card of content -->
-        <div class="card mb-3 main_card_body">
-          <div class="row g-0">
-            <div class="col-md-3">
-              <img
-                src="/photos/PexelsPhotobyMarkusSpiske.png"
-                alt="Picture of IT"
-                class="img-fluid rounded-start img-one"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body card_body_right">
-                <h4 class="card-title">
-                  Apakah AI akan menggantikan mata pencaharian manusia ?
-                </h4>
-                <p class="card-text">
-                  AI sudah tidak asing lagi dikalangan insan manusia.
-                  <a href="">Mau tahu lebih lanjut?</a>
-                </p>
-
-                <p class="card-text">
-                  <small class="text-muted">
-                    Write by Ulf's Creativity <br />
-                    <hr />
-                    Last update 2 hours ago
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Card of content -->
-
-        <!-- Card of content -->
-        <div class="card mb-3 main_card_body">
-          <div class="row g-0">
-            <div class="col-md-3">
-              <img
-                src="/photos/PexelsPhotobySerpstat.png"
-                alt="Picture of IT"
-                class="img-fluid rounded-start img-one"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body card_body_right">
-                <h4 class="card-title">
-                  Metode bisnis yang tepat untuk pemula. Apa saja itu?
-                </h4>
-                <p class="card-text">
-                  Banyak sekali orang yang sudah mulai berbisnis. Penting untuk
-                  mengetahui metode yang tepat agar kamu bisa berbinis dengan
-                  tepat.
-                  <a href="">Mau tahu lebih lanjut?</a>
-                </p>
-
-                <p class="card-text">
-                  <small class="text-muted">
-                    Write by Ulf's Creativity <br />
-                    <hr />
-                    Last update 1 hours ago
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Card of content -->
-
-        <!-- Card of content -->
-        <div class="card mb-3 main_card_body">
-          <div class="row g-0">
-            <div class="col-md-3">
-              <img
-                src="/photos/PexelsPhotobyMarkusSpiske.png"
-                alt="Picture of IT"
-                class="img-fluid rounded-start img-one"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body card_body_right">
-                <h4 class="card-title">
-                  Apakah AI akan menggantikan mata pencaharian manusia ?
-                </h4>
-                <p class="card-text">
-                  AI sudah tidak asing lagi dikalangan insan manusia.
-                  <a href="">Mau tahu lebih lanjut?</a>
-                </p>
-
-                <p class="card-text">
-                  <small class="text-muted">
-                    Write by Ulf's Creativity <br />
-                    <hr />
-                    Last update 2 hours ago
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Card of content -->
-
-        <!-- Card of content -->
-        <div class="card mb-3 main_card_body">
-          <div class="row g-0">
-            <div class="col-md-3">
-              <img
-                src="/photos/PexelsPhotobySerpstat.png"
-                alt="Picture of IT"
-                class="img-fluid rounded-start img-one"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body card_body_right">
-                <h4 class="card-title">
-                  Metode bisnis yang tepat untuk pemula. Apa saja itu?
-                </h4>
-                <p class="card-text">
-                  Banyak sekali orang yang sudah mulai berbisnis. Penting untuk
-                  mengetahui metode yang tepat agar kamu bisa berbinis dengan
-                  tepat.
-                  <a href="">Mau tahu lebih lanjut?</a>
-                </p>
-
-                <p class="card-text">
-                  <small class="text-muted">
-                    Write by Ulf's Creativity <br />
-                    <hr />
-                    Last update 1 hours ago
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Card of content -->
-
-        <!-- Card of content -->
-        <div class="card mb-3 main_card_body">
-          <div class="row g-0">
-            <div class="col-md-3">
-              <img
-                src="/photos/PexelsPhotobyMarkusSpiske.png"
-                alt="Picture of IT"
-                class="img-fluid rounded-start img-one"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body card_body_right">
-                <h4 class="card-title">
-                  Apakah AI akan menggantikan mata pencaharian manusia ?
-                </h4>
-                <p class="card-text">
-                  AI sudah tidak asing lagi dikalangan insan manusia.
-                  <a href="">Mau tahu lebih lanjut?</a>
-                </p>
-
-                <p class="card-text">
-                  <small class="text-muted">
-                    Write by Ulf's Creativity <br />
-                    <hr />
-                    Last update 2 hours ago
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Card of content -->
-
-        <!-- Card of content -->
-        <div class="card mb-3 main_card_body">
-          <div class="row g-0">
-            <div class="col-md-3">
-              <img
-                src="/photos/PexelsPhotobySerpstat.png"
-                alt="Picture of IT"
-                class="img-fluid rounded-start img-one"
-              />
-            </div>
-            <div class="col-md-8">
-              <div class="card-body card_body_right">
-                <h4 class="card-title">
-                  Metode bisnis yang tepat untuk pemula. Apa saja itu?
-                </h4>
-                <p class="card-text">
-                  Banyak sekali orang yang sudah mulai berbisnis. Penting untuk
-                  mengetahui metode yang tepat agar kamu bisa berbinis dengan
-                  tepat.
-                  <a href="">Mau tahu lebih lanjut?</a>
-                </p>
-
-                <p class="card-text">
-                  <small class="text-muted">
-                    Write by Ulf's Creativity <br />
-                    <hr />
-                    Last update 1 hours ago
-                  </small>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Card of content -->
-      </div>
-    </div>
-  </div>
-  <div class="tab-pane fade" id="latest" role="tabpanel">
-    <div class="card card-article">
-      <div class="card-body">All latest articles will show here..</div>
-    </div>
-  </div>
-  <div class="tab-pane fade" id="popular" role="tabpanel">
-    <div class="card card-article">
-      <div class="card-body">All popular articles will show here..</div>
-    </div>
-  </div>
-
-  <div class="tab-pane fade" id="tabtech" role="tabpanel">
-    <div class="card card-article">
-      <div class="card-body">All tech articles will show here..</div>
-    </div>
-  </div>
-  <div class="tab-pane fade" id="tabscience" role="tabpanel">
-    <div class="card card-article">
-      <div class="card-body">All science articles will show here..</div>
-    </div>
-  </div>
-  <div class="tab-pane fade" id="tablifestyle" role="tabpanel">
-    <div class="card card-article">
-      <div class="card-body">All lifestyle articles will show here..</div>
-    </div>
-  </div>
-  <div class="tab-pane fade" id="tabart" role="tabpanel">
-    <div class="card card-article">
-      <div class="card-body">All art articles will show here..</div>
-    </div>
-  </div>
-  <div class="tab-pane fade" id="tabtravel" role="tabpanel">
-    <div class="card card-article card-button">
-      <div class="card-body">All travel articles will show here..</div>
-    </div>
-  </div>
-
-  <div class="tab-pane fade" id="tab_forcreate" role="tabpanel">
+  <div class="tab-pane fade show active" id="tab_forcreate" role="tabpanel">
     <div class="card card-articles card-button">
       <!-- <div class="card-body">Form creating blog will be showed here..</div> -->
       <img
@@ -626,22 +189,47 @@
                 </div>
               </div>
             </form>
-            <!-- <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Save changes
-              </button>
-            </div> -->
           </div>
         </div>
       </div>
       <!--This end of pop up -->
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="info" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All information will show here..</div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="popular" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All popular articles will show here..</div>
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="tabtech" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All tech articles will show here..</div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="tabscience" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All science articles will show here..</div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="tablifestyle" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All lifestyle articles will show here..</div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="tabart" role="tabpanel">
+    <div class="card card-article">
+      <div class="card-body">All art articles will show here..</div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="tabtravel" role="tabpanel">
+    <div class="card card-article card-button">
+      <div class="card-body">All travel articles will show here..</div>
     </div>
   </div>
 
@@ -745,7 +333,7 @@
               </small>
             </p>
             <br>
-            <p class="card-text">${content}</p>
+            <p class="cards-text">${content}</p>
             <br>
             <h6 class="card-subtitle">${tag}</h6>
           </div>
@@ -791,8 +379,8 @@
           cardUpdate.querySelector("h4").innerText;
         document.getElementById("update_tag_blog").value =
           cardUpdate.querySelector("h6").innerText;
-        document.getElementById("update_content_blog").value =
-          cardUpdate.querySelector("p.card-text").innerText;
+        document.getElementById("update_contents_blog").value =
+          cardUpdate.querySelector("p.cards-text").innerText;
 
         // Save target id to form update
         document.getElementById("updateForm").dataset.targetId =
@@ -819,8 +407,8 @@
           document.getElementById("update_title_blog").value;
         cardUpdate.querySelector("h6").innerText =
           document.getElementById("update_tag_blog").value;
-        cardUpdate.querySelector("p.card-text").innerText =
-          document.getElementById("update_content_blog").value;
+        cardUpdate.querySelector("p.cards-text").innerText =
+          document.getElementById("update_contents_blog").value;
       }
       bootstrap.Modal.getInstance(
         document.getElementById("popupUpdate")
@@ -828,20 +416,6 @@
     });
   </script>
   <!-- End of script pop up create -->
-
-  <!-- <div class="tab-pane fade" id="tab_foredit" role="tabpanel">
-    <div class="card card-articles card-button">
-      <div class="card-body">Form editing blog will be showed here..</div>
-    </div>
-  </div>
-
-  <div class="tab-pane fade" id="tab_fordelete" role="tabpanel">
-    <div class="card card-articles card-button">
-      <div class="card-body">
-        Confirmation for deleting blogs will be showed here..
-      </div>
-    </div>
-  </div> -->
 
   <div class="tab-pane fade" id="tab_forsetting" role="tabpanel">
     <div class="card card-articles card-button">
@@ -851,13 +425,4 @@
 </div>
 <!-- End Content of Tab -->
 
-<!-- Content of Right Button -->
-<!-- <div class="tab-content mt-3"></div> -->
-<!-- End Content of Right Button -->
 <%-include('partials/footer') %>
-
-<!-- <div>
-          <h5 class="card-title">${title}</h5>
-          <h5 class="card-subtitle">${tag}</h5>
-          <p class="card-text">${content}</p>
-        </div> -->
