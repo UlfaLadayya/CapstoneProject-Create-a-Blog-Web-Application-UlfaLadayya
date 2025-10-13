@@ -1,5 +1,4 @@
-<%- include('partials/header', {title: 'Blogs Page'}) %>
-
+<%- include('partials/header', {title: 'Blogs Page', activeTab: activeTab}) %>
 <div class="duo_blogs_function">
   <ul class="nav nav-tabs" id="main_tab" role="tablist">
     <li class="nav-item" role="presentation">
@@ -17,7 +16,7 @@
     </li>
     <li class="nav-item" id="nav_back" role="presentation">
       <button
-        class="nav-link"
+        class="nav-link <%= activeTab === 'info' ? 'active' : '' %>"
         id="all_latest"
         data-bs-toggle="tab"
         data-bs-target="#info"

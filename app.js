@@ -16,7 +16,8 @@ app.get('/', (req, res) =>{
 });
 
 app.get('/blogs', (req, res) =>{
-    res.render('blogs', { title: 'Halaman Blogs' });
+    const tab = req.query.tab || 'info';
+    res.render('blogs', { title: 'Halaman Blogs', activeTab: tab });
 });
 
 app.get('/aboutus', (req, res) =>{
