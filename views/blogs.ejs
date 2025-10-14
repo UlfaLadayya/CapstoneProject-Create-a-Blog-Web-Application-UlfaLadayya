@@ -4,7 +4,7 @@
     <li class="nav-item" role="presentation">
       <!-- <a class="nav-link active" aria-current="page" href="#">All</a> -->
       <button
-        class="nav-link active"
+        class="nav-link <%= activeTab === 'create' ? 'active' : '' %>"
         id="tab_create"
         data-bs-toggle="tab"
         data-bs-target="#tab_forcreate"

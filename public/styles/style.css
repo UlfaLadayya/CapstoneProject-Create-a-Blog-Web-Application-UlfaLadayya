@@ -145,3 +145,15 @@ footer{
 .card-text{
     text-align: justify;
 }
+.nav-link.active{
+    color: #FFF8E6 !important;
+    font-weight: bold !important;
+    background: linear-gradient(to top right, #ff6a00, #7401d8) !important;
+    box-shadow: 0 2px 5px rgba(0, 123, 255 0.4);
+    border-radius: 15px;
+    transition: all 0.3 ease;
+}
+/* .nav-link.hover{
+    background-color: #FFF8E6 !important;
+    color: #ff6a00 !important;
+} */
